@@ -178,11 +178,11 @@ async def main():
             if cmd_type == 'F':
                 percent_speed = str_command[1:]
                 print(f'Setting forward with speed {percent_speed}')
-                set_motor(int(percent_speed))
+                set_motor(int(floor(percent_speed)))
             elif cmd_type == 'R':
                 percent_speed = str_command[1:]
                 print(f'Setting reverse with speed {percent_speed}')
-                set_motor(int(percent_speed), True)
+                set_motor(int(floor(percent_speed)), True)
             elif cmd_type == 'S':
                 angle = str_command[1:]
                 print(f'Setting steering with angle {angle}')
